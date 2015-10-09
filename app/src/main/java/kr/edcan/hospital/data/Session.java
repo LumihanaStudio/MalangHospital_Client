@@ -1,4 +1,4 @@
-package kr.edcan.hospital;
+package kr.edcan.hospital.data;
 
 /**
  * Created by Marzin-Oh on 2015-10-09.

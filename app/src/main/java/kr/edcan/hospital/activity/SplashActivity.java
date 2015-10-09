@@ -1,4 +1,4 @@
-package kr.edcan.hospital;
+package kr.edcan.hospital.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,12 +8,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import kr.edcan.hospital.utils.NetworkService;
+import kr.edcan.hospital.R;
+import kr.edcan.hospital.data.Session;
 import retrofit.Callback;
 import retrofit.RestAdapter;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
 
     public static String ENDPOINT = "http://bamtoll.moe";
     EditText user_login_id, user_login_pwd, user_login_re_pwd;
@@ -28,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_splash);
         setDefault();
         user_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void failure(RetrofitError error) {
                         register_state.setText(error.getResponse().getStatus()+"");
-                        Toast.makeText(MainActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SplashActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
             }

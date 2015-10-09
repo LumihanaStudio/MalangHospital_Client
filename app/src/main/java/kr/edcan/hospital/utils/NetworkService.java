@@ -1,5 +1,6 @@
-package kr.edcan.hospital;
+package kr.edcan.hospital.utils;
 
+import kr.edcan.hospital.data.Session;
 import retrofit.Callback;
 import retrofit.http.Field;
 import retrofit.http.FormUrlEncoded;
