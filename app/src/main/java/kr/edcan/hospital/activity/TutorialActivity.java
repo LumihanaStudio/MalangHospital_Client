@@ -9,7 +9,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.Button;
 import android.widget.Toast;
 
 import kr.edcan.hospital.R;
@@ -35,7 +35,7 @@ public class TutorialActivity extends Activity {
 
         @Override
         public int getCount() {
-            return 3;
+            return 4;
         }
 
         @Override
@@ -48,12 +48,13 @@ public class TutorialActivity extends Activity {
                 v = mInflater.inflate(R.layout.tuto_2, null);
             } else if (position == 2) {
                 v = mInflater.inflate(R.layout.tuto_3, null);
-                ImageView s = (ImageView)v.findViewById(R.id.touch);
-                s.setOnClickListener(new View.OnClickListener() {
+            } else if (position == 3) {
+                v = mInflater.inflate(R.layout.tuto_4, null);
+                Button start = (Button)v.findViewById(R.id.tutorial_start);
+                start.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                        startActivity(new Intent(getApplicationContext(), GroupAddActivity.class));
                         finish();
                     }
                 });
