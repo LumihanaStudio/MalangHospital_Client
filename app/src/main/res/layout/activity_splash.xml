@@ -1,62 +1,75 @@
-<LinearLayout
-    android:padding="16dp"
-    android:orientation="vertical"
-    android:layout_height="match_parent"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <EditText
-        android:hint="Input ID"
-        android:id="@+id/user_login_id"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:hint="Input Password"
-        android:id="@+id/user_login_pw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:hint="Re-Input Password"
-        android:id="@+id/user_login_reinput_pw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <Button
-        android:layout_gravity="center"
-        android:text="LOGIN"
-        android:id="@+id/user_login_btn"
+        android:layout_height="match_parent">
+        <ImageView
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_wow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginTop="160dp"
+            android:layout_centerHorizontal="true"
+            android:text="멍냥\n병원"
+            android:textSize="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:padding="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:layout_marginTop="10dp"
-        android:id="@+id/user_login_state_text"
-        android:text="Waiting for Login Request"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <!-- Register-->
-    <EditText
-        android:hint="Input ID"
-        android:id="@+id/user_register_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:hint="Input Password"
-        android:id="@+id/user_register_pw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:hint="Re-Input Password"
-        android:id="@+id/user_register_reinput_pw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <Button
-        android:layout_gravity="center"
-        android:text="REGISTER"
-        android:id="@+id/user_register_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:layout_marginTop="10dp"
-        android:id="@+id/user_register_state_text"
-        android:text="Waiting for Register Request"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:singleLine="true"
+            android:textColor="#FFF"
+            android:id="@+id/user_login_id"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Input ID" />
+
+        <EditText
+            android:singleLine="true"
+            android:textColor="#FFF"
+            android:id="@+id/user_login_pw"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Input Password" />
+
+        <FrameLayout
+            android:id="@+id/splash_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/tutorial_button_background"></LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="로그인"
+                android:textColor="#8DD5D0"
+                android:textSize="15dp" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

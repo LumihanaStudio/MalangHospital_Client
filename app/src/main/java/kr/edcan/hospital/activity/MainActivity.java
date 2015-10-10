@@ -10,12 +10,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.afollestad.materialdialogs.MaterialDialog;
-
 import kr.edcan.hospital.R;
 import kr.edcan.hospital.utils.ViewPagerAdapter;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
 
 
     SharedPreferences sharedPreferences;
@@ -26,8 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     RelativeLayout m1, m2, actionbar_1, actionbar_2;
     ImageView tab_main, tab_search, tabs[], settings, search;
     LinearLayout tab_bar1, tab_bar2, tab_bars[];
-    MaterialDialog progress;
-    String asdf[];
+    String asdf[], daily_advice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,15 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setTab(0);
     }
 
-    public void loadData(){
-        progress = new MaterialDialog.Builder(getApplicationContext())
-                .progress(true, 0)
-                .title("데이터를 로딩중입니다")
-                .content("잠시만 기다려주세요")
-                .show();
-        // TODO: Load Data from Server
-        progress.dismiss();
-    }
+
     public void setDefault() {
         asdf = new String[]{"asdf"};
         actionbar_1 = (RelativeLayout) findViewById(R.id.main_actionbar_1);
@@ -122,6 +112,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+
+
 
     public void onResume() {
         super.onResume();

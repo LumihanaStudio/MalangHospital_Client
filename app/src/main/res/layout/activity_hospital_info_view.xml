@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context="kr.edcan.hospital.activity.HospitalInfoViewActivity">
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@drawable/jido"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#58BAB3"
+        android:orientation="vertical"
+        android:weightSum="6">
+
+        <TextView
+            android:textColor="#FFF"
+            android:textSize="25dp"
+            android:paddingLeft="16dp"
+            android:gravity="center_vertical"
+            android:text="한성동물병원"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#76CFC9">
+        </TextView>
+
+        <kr.edcan.hospital.utils.SlidingTabLayout
+            android:id="@+id/sliding_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </kr.edcan.hospital.utils.SlidingTabLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

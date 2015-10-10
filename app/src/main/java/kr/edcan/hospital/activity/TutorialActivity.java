@@ -9,7 +9,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import kr.edcan.hospital.R;
@@ -21,6 +21,7 @@ public class TutorialActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial);
+//        startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "010-4549-2602")));
         mPager = (ViewPager) findViewById(R.id.ViewPager);
         mPager.setAdapter(new PagerAdapterClass(getApplicationContext()));
     }
@@ -50,7 +51,7 @@ public class TutorialActivity extends Activity {
                 v = mInflater.inflate(R.layout.tuto_3, null);
             } else if (position == 3) {
                 v = mInflater.inflate(R.layout.tuto_4, null);
-                Button start = (Button)v.findViewById(R.id.tutorial_start);
+                RelativeLayout start = (RelativeLayout) v.findViewById(R.id.next);
                 start.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
